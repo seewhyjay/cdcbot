@@ -35,5 +35,7 @@
 - 'auth' table
 - ![image](MySQLWorkbench_QIm3gX662q.png)
 
+### Keeping cookies alive
+- Ping your url/keepalive every 1-5 minutes to keep your cookie alive
 ---
 #### Bot will break if you haven't completed 5 lessons yet because you can't see simulator lessons, to fix this just comment out lines 154-159 and 170-171 in bot.py
