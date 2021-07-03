@@ -11,8 +11,8 @@ def convertToBinaryData(filename):
         blobData = file.read()
     return blobData
 
-
-driver = selenium.webdriver.Firefox(executable_path=r"C:\Users\admin\Downloads\Compressed\geckodriver.exe")
+# Replace with the path to your geckodriver
+driver = selenium.webdriver.Firefox(executable_path=r"")
 driver.get("https://www.cdc.com.sg/")
 time.sleep(60)
 pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
