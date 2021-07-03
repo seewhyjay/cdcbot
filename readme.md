@@ -35,6 +35,8 @@
 - 'auth' table
 - ![image](MySQLWorkbench_QIm3gX662q.png)
 
+### Getting updates every x minutes
+- Ping url/ping every x minutes you want to receive the updates
 ### Keeping cookies alive
 - Ping your url/keepalive every 1-5 minutes to keep your cookie alive
 ---
