@@ -16,8 +16,10 @@ global bot
 global TOKEN
 URL = ''
 TOKEN = ''
-bot = telegram.Bot(token=TOKEN)
 user_id = ''
+
+bot = telegram.Bot(token=TOKEN)
+
 
 app = Flask(__name__)
 
