@@ -19,13 +19,18 @@
 - GOOGLE_CHROME_BIN : /app/.apt/usr/bin/google_chrome
 
 # Setup
+### bot.py
+- Enter all your details
+    #### Changing what lessons you want to see
+    - under function screenshotAndSend, change the end of class3 (.../select/option[2] to the index of your desired lesson in the dropdown (If you're learning manual, class3a is index 3, class3 is index 2))
 ### conn.py
 - Just update and add your credentials accordingly
 
 ### Uploading cookies
 - Run uploadcookies.py
+- Download geckodriver (https://github.com/mozilla/geckodriver/releases) and enter your path to it
 - Login and do the captcha within a minute, if you fail just rerun
     
 ### ClearDB Setup
 - 'auth' table
-![image](MySQLWorkbench_QIm3gX662q.png)
+- ![image](MySQLWorkbench_QIm3gX662q.png)
