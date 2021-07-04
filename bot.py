@@ -193,7 +193,7 @@ def keepalive():
     driver.get("https://www.cdc.com.sg:8080/NewPortal/Booking/Dashboard.aspx?")
     time.sleep(2)
     if driver.current_url != "https://www.cdc.com.sg:8080/NewPortal/Booking/Dashboard.aspx?":
-        bot.send_message(user_id, text="You have been logged out, please uplaod new pickled cookie")
+        bot.send_message(user_id, text="You have been logged out, please upload a new cookie")
         driver.close()
         return "Cookie dead"
     driver.close()
