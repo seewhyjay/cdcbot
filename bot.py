@@ -82,7 +82,7 @@ def convertToBinaryData(filename):
         blobData = file.read()
     return blobData
 
-def update():
+def update_cookies():
     conn = getconn()
     with conn.cursor() as cur:
         cur.execute("SELECT cookie FROM auth")
@@ -95,7 +95,7 @@ def screenshotAndSend():
     conn = getconn()
     # Download cookies if it doesn't exist yet
     if not os.path.exists("cookies.pkl"):
-        update()
+        update_cookies()
 
     # All of these are to get selenium to work on Heroku
     chrome_options = webdriver.ChromeOptions()
@@ -176,7 +176,7 @@ def screenshotAndSend():
 def keepalive():
     if not os.path.exists("cookies.pkl"):
         print("Updating cookies")
-        update()
+        update_cookies()
     GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
     CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
     chrome_options = webdriver.ChromeOptions()
@@ -214,7 +214,7 @@ def respond():
     if text == 'changes' or text =='Changes':
         screenshotAndSend()
     elif text == "update":
-        update()
+        update_cookies()
     
     return 'ok'
 
