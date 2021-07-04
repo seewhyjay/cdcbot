@@ -17,6 +17,9 @@
 - CHROMEDRIVER_PATH : /app/.chromedriver/bin/chromedriver
 - CLEARDB_DATABASE_URL
 - GOOGLE_CHROME_BIN : /app/.apt/usr/bin/google_chrome
+- TOKEN(telegram bot id)
+- URL(heroku url)
+- user_id(your telegram uid)
 
 # Setup
 ### bot.py

@@ -14,9 +14,10 @@ import pickle
 
 global bot
 global TOKEN
-URL = ''
-TOKEN = ''
-user_id = ''
+URL = os.environ.get('URL')
+TOKEN = os.environ.get('TOKEN')
+user_id = os.environ.get('user_id')
+
 
 bot = telegram.Bot(token=TOKEN)
 
