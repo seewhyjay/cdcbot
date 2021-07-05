@@ -11,6 +11,7 @@ import cv2
 import pymysql
 from conn import getconn
 import pickle
+import azcaptcha
 
 global bot
 global TOKEN
@@ -216,7 +217,8 @@ def respond():
         screenshotAndSend()
     elif text == "update":
         update_cookies()
-    
+    elif text == "azcaptcha":
+        azcaptcha.main()
     return 'ok'
 
 @app.route('/setwebhook', methods=['GET', 'POST'])
