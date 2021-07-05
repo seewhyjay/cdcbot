@@ -44,6 +44,6 @@
 ### Getting updates every x minutes
 - Ping url/ping every x minutes you want to receive the updates (Use a service like cron-job.org)
 ### Keeping cookies alive
-- Ping your url/keepalive every 1-5 minutes to keep your cookie alive (Use a service like crom-job.org)
+- Ping your url/keepalive every 1-5 minutes to keep your cookie alive (Use a service like cron-job.org)
 ---
 #### Bot will break if you haven't completed 5 lessons yet because you can't see simulator lessons, to fix this just comment out lines 154-159 and 170-171 in bot.py
