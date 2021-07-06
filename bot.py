@@ -86,6 +86,8 @@ def convertToBinaryData(filename):
 
 def update_cookies():
     conn = getconn()
+    if os.environ.get("azcaptcha_key"):
+        azcaptcha.main()
     with conn.cursor() as cur:
         cur.execute("SELECT cookie FROM auth")
         cookie = cur.fetchone()[0]
@@ -213,12 +215,13 @@ def respond():
     text = update.message.text.encode('utf-8').decode()
     print("got text message:", text, "from: ", chat_id)
 
-    if text == 'changes' or text =='Changes':
+    if str.lower(text) == '/classes' or str.lower(text) =='classes':
         screenshotAndSend()
-    elif text == "update":
+    elif text == "/update":
         update_cookies()
-    elif text == "azcaptcha":
+    elif text == "/azcaptcha":
         azcaptcha.main()
+        update_cookies()
     return 'ok'
 
 @app.route('/setwebhook', methods=['GET', 'POST'])
