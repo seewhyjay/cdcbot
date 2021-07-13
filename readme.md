@@ -1,5 +1,6 @@
 # CDCBot
-A personal telegram bot to send you periodic updates of available classes
+A selenium based personal telegram bot to send you periodic updates of available classes.
+Use at your own risk
 
 ## Setup
 ### bot.py
